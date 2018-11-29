@@ -20,6 +20,15 @@ bootstraping the application, it will not have its own branch.
 * Defining inline and stylesheet styles
 * Two-way databinding
 
+### Section 2: Working with Lists and Conditionals
+
+* Rendering dynamic content conditionally in JSX
+* Handling dynamic content using "The JavaScript Way" in JSX
+* Rendering lists using JavaScript in JSX
+* Providing state to list items (callbacks, properties, etc.)
+* The importance of updating state immutably
+* How to provide keys to list components to optimize rendering state updates
+
 ## Available Scripts
 
 In the project directory, you can run:
