@@ -13,17 +13,13 @@ class App extends Component {
         , isPersonsVisible: false
     };
 
-    onSwitchName = (newName) => {
-        // DO NOT DO THIS: this.state.persons[0].name = 'John';
-        // React will not recognize state changes when mutated directly
-        // use setState(...) instead.
+    onDeletePerson = (index) => {
+        const persons = this.state.persons;
 
-        this.setState({
-            persons: [
-                {name: newName, age: 123}
-                , {name: 'Jeremy', age: 20}
-                , {name: 'Nigel', age: 5}
-            ]
+        persons.splice(index, 1);
+
+        return this.setState({
+            persons: persons
         });
     };
 
@@ -55,11 +51,11 @@ class App extends Component {
 
         const persons = this.state.isPersonsVisible
             ? <div>
-                {this.state.persons.map(p =>
+                {this.state.persons.map((p, i) =>
                     <Person
                         name={p.name}
                         age={p.age}
-                        click={this.onSwitchName.bind(this, 'Max')}
+                        click={this.onDeletePerson.bind(this, i)}
                         onNameChange={this.onNameChange}/>
                 )}
             </div>
