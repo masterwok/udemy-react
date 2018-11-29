@@ -1,0 +1,14 @@
+.UserOutput {
+    margin: 16px auto;
+    border: 1px solid #ddd;
+    width: 60%;
+    padding: 20px;
+}
+
+.UserOutput p:first-of-type {
+    color: cornflowerblue;
+}
+
+.UserOutput p:nth-of-type(2) {
+    color: darkcyan;
+}
