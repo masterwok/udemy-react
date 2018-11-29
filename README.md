@@ -1,4 +1,4 @@
-## React Complete Guide (Udemy)
+## Overview
 
 This repository contains the projects built during, [React the Complete Guide Including Redux](https://www.udemy.com/react-the-complete-guide-incl-redux) course available on Udemy.
 **This is a personal project created while following along with the course and is not affiliated with the actual course in any way**. The primary goal of this repository is to serve as a future reference when building applications with ReactJS and Redux.
