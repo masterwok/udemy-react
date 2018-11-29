@@ -38,10 +38,24 @@ class App extends Component {
     };
 
     render() {
+
+        // Scoped styles are defined as objects and applied through the style attribute
+        const buttonStyle = {
+            margin: '16px auto'
+            , backgroundColor: 'white'
+            , font: 'inherit'
+            , border: '1px solid blue'
+            , padding: '8px'
+            , cursor: 'pointer'
+        };
+
         return (
             <div className="App">
                 {/*Lambda expression callback (not preferred)*/}
-                <button onClick={() => this.onSwitchName('Max!!!')}>Switch Name</button>
+                <button
+                    style={buttonStyle}
+                    onClick={() => this.onSwitchName('Max!!!')}>Switch Name
+                </button>
 
                 <Person
                     name={this.state.persons[0].name}
