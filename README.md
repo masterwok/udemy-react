@@ -27,3 +27,10 @@ bootstraping the application, they will not have their own branch.
   * [Listenable Events](http://reactjs.org/docs/events.html)
 
 ### Section 4: Working with Lists and Conditionals
+
+* Rendering dynamic content conditionally in JSX
+* Handling dynamic content using "The JavaScript Way" in JSX
+* Rendering lists using JavaScript in JSX
+* Providing state to list items (callbacks, properties, etc.)
+* The importance of updating state immutably
+* How to provide keys to list components to optimize rendering state updates
