@@ -4,11 +4,11 @@ This repository contains the overarching course project of the Udemy course on R
 This is a personal project and has no affiliation with the actual course on Udemy. The primary goal
 of this project is to be organized in such a way that it can be referenced by topic/section.
 
-## Sections
-
 This repository is structured to have each course section within its own branch. Once a section is 
 complete, then it will be merged back down into master. Because sections 1-3 focus on
 bootstraping the application, they will not have their own branch.
+## Sections
+
 
 ### Section 3: Understanding the Base Features & Syntax
 
