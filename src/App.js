@@ -1,14 +1,19 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './App.css';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-          <h1>Hi, I'm a React App :]</h1>
-      </div>
-    );
-  }
+    render() {
+        return (
+          <div className="App">
+              <h1>Hi, I'm a React App :]</h1>
+          </div>
+        );
+        // return React.createElement(
+        //     'div'
+        //     , null
+        //     , React.createElement('h1', { className: 'App' }, 'hack the planet!!!')
+        // );
+    }
 }
 
 export default App;
