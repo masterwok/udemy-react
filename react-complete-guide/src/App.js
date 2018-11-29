@@ -14,7 +14,8 @@ class App extends Component {
     };
 
     onDeletePerson = (index) => {
-        const persons = this.state.persons;
+        // Create a copy of the array to  ensure immutability.
+        const persons = [...this.state.persons];
 
         persons.splice(index, 1);
 
