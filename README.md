@@ -34,3 +34,11 @@ bootstraping the application, they will not have their own branch.
 * Providing state to list items (callbacks, properties, etc.)
 * The importance of updating state immutably
 * How to provide keys to list components to optimize rendering state updates
+* Helpful links:
+  * [Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html)
+  * [Lists & Keys](https://reactjs.org/docs/lists-and-keys.html)
+
+
+
+
+
