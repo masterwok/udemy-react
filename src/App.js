@@ -13,15 +13,15 @@ class App extends Component {
         , otherState: 'some other state'
     };
 
-    onSwitchName = () => {
+    onSwitchName = (newName) => {
         // DO NOT DO THIS: this.state.persons[0].name = 'John';
         // React will not recognize state changes when mutated directly
         // use setState(...) instead.
 
         this.setState({
             persons: [
-                {name: 'John', age: 28}
-                , {name: 'Jeremey', age: 20}
+                {name: newName, age: 123}
+                , {name: 'Bob', age: 321}
                 , {name: 'Nigel', age: 666}
             ]
         });
@@ -30,10 +30,23 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <button onClick={this.onSwitchName}>Switch Name</button>
-                <Person name={this.state.persons[0].name} age={this.state.persons[0].age}/>
-                <Person name={this.state.persons[1].name} age={this.state.persons[1].age}/>
-                <Person name={this.state.persons[2].name} age={this.state.persons[2].age}/>
+                {/*Lambda expression callback (not preferred)*/}
+                <button onClick={() => this.onSwitchName('Max!!!')}>Switch Name</button>
+
+                <Person
+                    name={this.state.persons[0].name}
+                    age={this.state.persons[0].age}
+                    click={this.onSwitchName.bind(this, 'Max')}/>
+                <Person
+                    name={this.state.persons[1].name}
+                    age={this.state.persons[1].age}
+                    click={this.onSwitchName}/>
+
+                {/*Bind syntax preferred over lambda expression*/}
+                <Person
+                    name={this.state.persons[2].name}
+                    age={this.state.persons[2].age}
+                    click={this.onSwitchName.bind(this, 'Derp')}/>
             </div>
         );
     }
