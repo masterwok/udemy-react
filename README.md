@@ -12,7 +12,7 @@ bootstraping the application, they will not have their own branch.
 
 ### Section 3: Understanding the Base Features & Syntax
 
-* Bootstrapped application using [Create React App](https://github.com/facebook/create-react-app)
+* Bootstrapped application using [create-react-app](https://github.com/facebook/create-react-app)
 * Functional and class based Components
 * Nesting child elements with the children property
 * State management within class components
