@@ -53,6 +53,26 @@ class App extends Component {
             , cursor: 'pointer'
         };
 
+        const persons = this.state.isPersonsVisible
+            ? <div>
+                <Person
+                    name={this.state.persons[0].name}
+                    age={this.state.persons[0].age}
+                    click={this.onSwitchName.bind(this, 'Max')}
+                    onNameChange={this.onNameChange}/>
+                <Person
+                    name={this.state.persons[1].name}
+                    age={this.state.persons[1].age}
+                    click={this.onSwitchName}/>
+
+                {/*Bind syntax preferred over lambda expression*/}
+                <Person
+                    name={this.state.persons[2].name}
+                    age={this.state.persons[2].age}
+                    click={this.onSwitchName.bind(this, 'Derp')}/>
+            </div>
+            : null;
+
         return (
             <div className="App">
                 {/*Lambda expression callback (not preferred)*/}
@@ -61,26 +81,7 @@ class App extends Component {
                     onClick={this.onTogglePersons}>
                     Toggle Persons
                 </button>
-
-                {this.state.isPersonsVisible ?
-                    <div>
-                        <Person
-                            name={this.state.persons[0].name}
-                            age={this.state.persons[0].age}
-                            click={this.onSwitchName.bind(this, 'Max')}
-                            onNameChange={this.onNameChange}/>
-                        <Person
-                            name={this.state.persons[1].name}
-                            age={this.state.persons[1].age}
-                            click={this.onSwitchName}/>
-
-                        {/*Bind syntax preferred over lambda expression*/}
-                        <Person
-                            name={this.state.persons[2].name}
-                            age={this.state.persons[2].age}
-                            click={this.onSwitchName.bind(this, 'Derp')}/>
-                    </div> : null
-                }
+                {persons}
             </div>
         );
     }
