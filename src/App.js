@@ -7,7 +7,7 @@ class App extends Component {
     state = {
         persons: [
             {name: 'Jonathan', age: 28}
-            , {name: 'Jeremey', age: 20}
+            , {name: 'Jeremy', age: 20}
             , {name: 'Nigel', age: 5}
         ]
         , otherState: 'some other state'
@@ -21,8 +21,18 @@ class App extends Component {
         this.setState({
             persons: [
                 {name: newName, age: 123}
-                , {name: 'Bob', age: 321}
-                , {name: 'Nigel', age: 666}
+                , {name: 'Jeremy', age: 20}
+                , {name: 'Nigel', age: 5}
+            ]
+        });
+    };
+
+    onNameChange = (event) => {
+        this.setState({
+            persons: [
+                {name: event.target.value, age: 123}
+                , {name: 'Jeremy', age: 20}
+                , {name: 'Nigel', age: 5}
             ]
         });
     };
@@ -36,7 +46,7 @@ class App extends Component {
                 <Person
                     name={this.state.persons[0].name}
                     age={this.state.persons[0].age}
-                    click={this.onSwitchName.bind(this, 'Max')}/>
+                    click={this.onSwitchName.bind(this, 'Max')} onNameChange={this.onNameChange}/>
                 <Person
                     name={this.state.persons[1].name}
                     age={this.state.persons[1].age}
