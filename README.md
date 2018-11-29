@@ -7,10 +7,10 @@ of this project is to be organized in such a way that it can be referenced by to
 ## Sections
 
 This repository is structured to have each course section within its own branch. Once a section is 
-complete, then it will be merged back down into master. Because the first section focuses on
-bootstraping the application, it will not have its own branch.
+complete, then it will be merged back down into master. Because sections 1-3 focus on
+bootstraping the application, they will not have their own branch.
 
-### Section 1: Understanding the Base Features & Syntax
+### Section 3: Understanding the Base Features & Syntax
 
 * Bootstrapped application using [Create React App](https://github.com/facebook/create-react-app)
 * Functional and class based Components
@@ -25,6 +25,9 @@ bootstraping the application, it will not have its own branch.
   * [Rendering Elements](https://reactjs.org/docs/rendering-elements.html)
   * [Components & Props](https://reactjs.org/docs/components-and-props.html)
   * [Listenable Events](http://reactjs.org/docs/events.html)
+
+### Section 4: Working with Lists and Conditionals
+
 
 ## Available Scripts
 
