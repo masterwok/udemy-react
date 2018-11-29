@@ -25,13 +25,21 @@ class App extends Component {
         });
     };
 
-    onNameChange = (event) => {
-        this.setState({
-            persons: [
-                {id: 1, name: event.target.value, age: 28}
-                , {id: 2, name: 'Jeremy', age: 20}
-                , {id: 3, name: 'Nigel', age: 5}
-            ]
+    onNameChange = (event, id) => {
+        const personIndex = this
+            .state
+            .persons
+            .findIndex(p => p.id === id);
+
+        const persons = [...this.state.persons];
+
+        persons[personIndex] = {
+            ...this.state.persons[personIndex]
+            , name: event.target.value
+        };
+
+        return this.setState({
+            persons: persons
         });
     };
 
@@ -59,7 +67,7 @@ class App extends Component {
                         name={person.name}
                         age={person.age}
                         click={this.onDeletePerson.bind(this, index)}
-                        onNameChange={this.onNameChange}/>
+                        onNameChange={(event) => this.onNameChange(event, person.id)}/>
                 )}
             </div>
             : null;
