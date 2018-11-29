@@ -19,6 +19,7 @@ bootstraping the application, they will not have their own branch.
 * Passing event callbacks
 * Defining inline and stylesheet styles
 * Two-way data binding
+* [Practice assignment](https://github.com/masterwok/udemy-react/tree/master/assignment-one)
 * Helpful links:
   * [create-react-app](https://github.com/facebookincubator/create-react-app)
   * [Introducing JSX](https://reactjs.org/docs/introducing-jsx.html)
@@ -34,6 +35,7 @@ bootstraping the application, they will not have their own branch.
 * Providing state to list items (callbacks, properties, etc.)
 * The importance of updating state immutably
 * How to provide keys to list components to optimize rendering state updates
+* [Practice assignment](https://github.com/masterwok/udemy-react/tree/master/assignment-two)
 * Helpful links:
   * [Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html)
   * [Lists & Keys](https://reactjs.org/docs/lists-and-keys.html)
