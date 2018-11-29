@@ -10,10 +10,21 @@ class App extends Component {
             , {name: 'Jeremey', age: 20}
             , {name: 'Nigel', age: 5}
         ]
+        , otherState: 'some other state'
     };
 
     onSwitchName = () => {
-        console.log('Oh hi, Mark!');
+        // DO NOT DO THIS: this.state.persons[0].name = 'John';
+        // React will not recognize state changes when mutated directly
+        // use setState(...) instead.
+
+        this.setState({
+            persons: [
+                {name: 'John', age: 28}
+                , {name: 'Jeremey', age: 20}
+                , {name: 'Nigel', age: 666}
+            ]
+        });
     };
 
     render() {
