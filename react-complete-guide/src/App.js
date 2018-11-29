@@ -6,9 +6,9 @@ class App extends Component {
 
     state = {
         persons: [
-            {name: 'Jonathan', age: 28}
-            , {name: 'Jeremy', age: 20}
-            , {name: 'Nigel', age: 5}
+            {id: 1, name: 'Jonathan', age: 28}
+            , {id: 2, name: 'Jeremy', age: 20}
+            , {id: 3, name: 'Nigel', age: 5}
         ]
         , isPersonsVisible: false
     };
@@ -28,9 +28,9 @@ class App extends Component {
     onNameChange = (event) => {
         this.setState({
             persons: [
-                {name: event.target.value, age: 123}
-                , {name: 'Jeremy', age: 20}
-                , {name: 'Nigel', age: 5}
+                {id: 1, name: event.target.value, age: 28}
+                , {id: 2, name: 'Jeremy', age: 20}
+                , {id: 3, name: 'Nigel', age: 5}
             ]
         });
     };
@@ -53,11 +53,12 @@ class App extends Component {
 
         const persons = this.state.isPersonsVisible
             ? <div>
-                {this.state.persons.map((p, i) =>
+                {this.state.persons.map((person, index) =>
                     <Person
-                        name={p.name}
-                        age={p.age}
-                        click={this.onDeletePerson.bind(this, i)}
+                        key={person.id}
+                        name={person.name}
+                        age={person.age}
+                        click={this.onDeletePerson.bind(this, index)}
                         onNameChange={this.onNameChange}/>
                 )}
             </div>
