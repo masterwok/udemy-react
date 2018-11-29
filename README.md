@@ -12,7 +12,7 @@ bootstraping the application, it will not have its own branch.
 
 ### Section 1: Understanding the Base Features & Syntax
 
-* Bootstrapped application using [Create React App](https://github.com/facebook/create-react-app).
+* Bootstrapped application using [Create React App](https://github.com/facebook/create-react-app)
 
 ## Available Scripts
 
