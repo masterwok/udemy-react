@@ -1,4 +1,18 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## React Complete Guide (Udemy)
+
+This repository contains the overarching course project of the Udemy course on ReactJS and Redux.
+This is a personal project and has no affiliation with the actual course on Udemy. The primary goal
+of this project is to be organized in such a way that it can be referenced by topic/section.
+
+## Sections
+
+This repository is structured to have each course section within its own branch. Once a section is 
+complete, then it will be merged back down into master. Because the first section focuses on
+bootstraping the application, it will not have its own branch.
+
+### Section 1: Understanding the Base Features & Syntax
+
+* Bootstrapped application using [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
