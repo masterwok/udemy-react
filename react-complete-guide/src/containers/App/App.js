@@ -13,6 +13,7 @@ class App extends PureComponent {
             , {id: 3, name: 'Nigel', age: 5}
         ]
         , isPersonsVisible: false
+        , toggleClickedCount: 0
     };
 
     constructor(props) {
@@ -67,9 +68,14 @@ class App extends PureComponent {
         });
     };
 
-    onTogglePersons = () => this.setState({
-        isPersonsVisible: !this.state.isPersonsVisible
-    });
+    // setState is an asynchronous call when invoked with an object as a parameter.
+    // Therefore, it is not a good idea to reference previous state directly on the state object.
+    // Instead, pass setState(..) a function that accepts both the previous state and current
+    // properties. By doing this, the previous state can be safely accessed preventing race conditions.
+    onTogglePersons = () => this.setState((oldState, props) => ({
+        toggleClickedCount: oldState.toggleClickedCount + 1
+        , isPersonsVisible: !this.state.isPersonsVisible
+    }));
 
     render() {
         console.log('Render invoked.');
