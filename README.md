@@ -53,5 +53,13 @@ bootstraping the application, they will not have their own branch.
   * [Using CSS Modules in create-react-app Projects](https://medium.com/nulogy/how-to-use-css-modules-with-create-react-app-9e44bec2b5c2)
   * [More Information on CSS Modules)](https://github.com/css-modules/css-modules)
 
+### Section 6: Debugging React Apps
+
+* Overview of error boundary components to catch failing components
+* Debugging react applications using React Dev Tools
+* Helpful links:
+  * [Error Boundaries](https://reactjs.org/docs/error-boundaries.html)
+  * [Chrome DevTool Debugging](https://developers.google.com/web/tools/chrome-devtools/javascript/)
+
 
 
