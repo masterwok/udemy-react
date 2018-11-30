@@ -3,12 +3,6 @@ import styles from './Person.module.css';
 
 
 export default (props) => {
-    const rand = Math.random();
-
-    if (rand > 0.7) {
-        throw new Error('Whoa something happened!');
-    }
-
     return (
         <div className={styles.Person}>
             <p onClick={props.click}>Hi, I'm {props.name} and I'm {props.age} years old!</p>
