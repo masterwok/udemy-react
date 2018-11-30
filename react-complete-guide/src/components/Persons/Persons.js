@@ -18,6 +18,24 @@ class Persons extends Component {
         console.log('ComponentDidMount invoked.');
     }
 
+    componentWillReceiveProps(nextProps) {
+        console.log('ComponentWillReceiveProps invoked', nextProps);
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        console.log('shouldComponentUpdate invoked', nextProps, nextState);
+
+        return true;
+    }
+
+    componentWillUpdate(nextProps, nextState) {
+        console.log('componentWillUpdate invoked', nextProps, nextState);
+    }
+
+    componentDidUpdate() {
+        console.log('componentDidUpdate invoked');
+    }
+
     render() {
         console.log('Render invoked.');
 
