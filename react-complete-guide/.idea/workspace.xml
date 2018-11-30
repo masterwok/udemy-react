@@ -53,7 +53,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="1026" />
-          <entry key="js" value="13820" />
+          <entry key="js" value="14362" />
           <entry key="json" value="2" />
           <entry key="md" value="1283" />
         </counts>
@@ -62,7 +62,7 @@
         <counts>
           <entry key="CSS" value="1026" />
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="13820" />
+          <entry key="JavaScript" value="14362" />
           <entry key="Markdown" value="1283" />
         </counts>
       </usages-collector>
@@ -81,11 +81,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/Persons/Persons.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="310">
-                  <caret line="23" selection-start-line="23" selection-end-line="23" />
+                <state relative-caret-position="230">
+                  <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
                   <folding>
                     <element signature="e#0#39#0" expanded="true" />
                   </folding>
@@ -114,7 +114,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/hoc/secondWithClass.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="500">
@@ -130,8 +130,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/containers/App/App.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="620">
-                  <caret line="71" column="29" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
+                <state relative-caret-position="660">
+                  <caret line="73" column="91" selection-start-line="73" selection-start-column="91" selection-end-line="73" selection-end-column="91" />
                   <folding>
                     <element signature="e#0#43#0" expanded="true" />
                     <element signature="e#1059#1435#0" />
@@ -424,16 +424,15 @@
       <workItem from="1543442830378" duration="839000" />
       <workItem from="1543449875324" duration="16715000" />
       <workItem from="1543538323925" duration="2587000" />
-      <workItem from="1543602746432" duration="6228000" />
+      <workItem from="1543602746432" duration="7240000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38409000" />
+    <option name="totallyTimeSpent" value="39421000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1917" y="-9" width="2566" height="1452" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1367589" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -570,16 +569,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Persons/Persons.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Person/Person.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -596,11 +585,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/App/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="71" column="29" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
+        <state relative-caret-position="660">
+          <caret line="73" column="91" selection-start-line="73" selection-start-column="91" selection-end-line="73" selection-end-column="91" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
             <element signature="e#1059#1435#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Persons/Persons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import styles from './Person.module.css';
-import WithClass from "../../hoc/WithClass";
 import secondWithClass from "../../hoc/secondWithClass";
+import PropTypes from 'prop-types';
 
 class Person extends Component {
 
@@ -37,6 +37,14 @@ class Person extends Component {
         </>
     }
 }
+
+// Restrict and defined property types.
+Person.propTypes = {
+    click: PropTypes.func
+    , change: PropTypes.func
+    , name: PropTypes.string
+    , age: PropTypes.number
+};
 
 export default secondWithClass(Person, styles.Person);
 
