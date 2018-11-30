@@ -38,7 +38,19 @@ bootstraping the application, they will not have their own branch.
   * [Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html)
   * [Lists & Keys](https://reactjs.org/docs/lists-and-keys.html)
 
+# Section 5: Styling React Components & Elements
 
+* Setting styles dynamically
+* Settings Class Names Dynamically
+* Adding and Using Radium
+* Using Radium for media queries
+* Enabiling & Using CSS Modules
+* Adding psuedo selectors
+* Working with media queries
+* Helpful links:
+  * [Enabling CSS Modules (without eject) in create-react-app Projects](https://facebook.github.io/create-react-app/docs/adding-a-css-modules-stylesheet)
+  * [Using CSS Modules in create-react-app Projects](https://medium.com/nulogy/how-to-use-css-modules-with-create-react-app-9e44bec2b5c2)
+  * [More Information on CSS Modules)](https://github.com/css-modules/css-modules)
 
 
 
