@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import styles from './Person.module.css';
+import WithClass from "../../hoc/WithClass";
 
 class Person extends Component {
 
@@ -24,7 +25,7 @@ class Person extends Component {
     render() {
         console.log('Render invoked.');
 
-        return <div className={styles.Person}>
+        return <WithClass classes={styles.Person}>
             <p onClick={this.props.click}>Hi, I'm {this.props.name} and I'm {this.props.age} years
                 old!</p>
             <p onClick={this.props.click}>{this.props.children}</p>
@@ -32,7 +33,7 @@ class Person extends Component {
                 type="text"
                 onChange={this.props.onNameChange}
                 value={this.props.name}/>
-        </div>
+        </WithClass>
     }
 }
 

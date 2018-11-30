@@ -2,6 +2,7 @@ import React, {PureComponent} from 'react';
 import styles from './App.module.css';
 import Persons from "../../components/Persons/Persons";
 import Cockpit from "../../components/Cockpit/Cockpit";
+import WithClass from "../../hoc/WithClass";
 
 class App extends PureComponent {
 
@@ -74,7 +75,7 @@ class App extends PureComponent {
         console.log('Render invoked.');
 
         return (
-            <div className={styles.App}>
+            <WithClass classes={styles.App}>
                 <button onClick={() => this.setState({isPersonsVisible: true})}>Show Persons
                 </button>
                 <Cockpit
@@ -86,7 +87,7 @@ class App extends PureComponent {
                     persons={this.state.persons}
                     onDeletePerson={this.onDeletePerson}
                     onNameChange={this.onNameChange}/>
-            </div>
+            </WithClass>
         );
     }
 }
