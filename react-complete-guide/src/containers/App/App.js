@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import Person from './Person/Person.js'
 import styles from './App.module.css';
+import Persons from "../../components/Persons/Persons";
+import Cockpit from "../../components/Cockpit/Cockpit";
 
 class App extends Component {
 
@@ -48,43 +49,18 @@ class App extends Component {
     });
 
     render() {
-        let persons = null;
-        const buttonClasses = [styles.toggleButton];
-
-        if (this.state.isPersonsVisible) {
-            persons = <div>
-                {this.state.persons.map((person, index) =>
-                    <Person
-                        name={person.name}
-                        age={person.age}
-                        click={this.onDeletePerson.bind(this, index)}
-                        onNameChange={(event) => this.onNameChange(event, person.id)}/>
-                )}
-            </div>;
-
-            buttonClasses.push(styles.toggleButtonVisible)
-        }
-
-        const containerClasses = [];
-
-        if (this.state.persons.length <= 2) {
-            containerClasses.push(styles.red);
-        }
-
-        if (this.state.persons.length <= 1) {
-            containerClasses.push(styles.bold);
-        }
 
         return (
             <div className={styles.App}>
-                <h1>This is a React app!</h1>
-                <p className={containerClasses.join(' ')}>Foo bar baz bax</p>
-                <button
-                    className={buttonClasses.join(' ')}
-                    onClick={this.onTogglePersons}>
-                    Toggle Persons
-                </button>
-                {persons}
+                <Cockpit
+                    isPersonsVisible={this.state.isPersonsVisible}
+                    personsCount={this.state.persons.length}
+                    onToggleButtonClick={this.onTogglePersons}/>
+                <Persons
+                    isVisible={this.state.isPersonsVisible}
+                    persons={this.state.persons}
+                    onDeletePerson={this.onDeletePerson}
+                    onNameChange={this.onNameChange}/>
             </div>
         );
     }
