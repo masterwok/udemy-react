@@ -17,6 +17,12 @@ class Person extends Component {
 
     componentDidMount() {
         console.log('ComponentDidMount invoked.');
+
+        // Referenced elements are available only after render is invoked.
+        // Therefore mutations to referenced elements should occur in componentDidMount()
+        if (this.props.position === 0) {
+            this.inputElement.focus();
+        }
     }
 
     componentWillUnmount() {
@@ -31,6 +37,11 @@ class Person extends Component {
                 old!</p>
             <p onClick={this.props.click}>{this.props.children}</p>
             <input
+                // Add reference to this element on this component.
+                // Referenced elements can only exist in stateful class components.
+                ref={(el) => {
+                    this.inputElement = el;
+                }}
                 type="text"
                 onChange={this.props.onNameChange}
                 value={this.props.name}/>
@@ -44,6 +55,7 @@ Person.propTypes = {
     , change: PropTypes.func
     , name: PropTypes.string
     , age: PropTypes.number
+    , position: PropTypes.number
 };
 
 export default secondWithClass(Person, styles.Person);
