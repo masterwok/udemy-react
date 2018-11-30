@@ -28,6 +28,20 @@ class App extends Component {
         console.log('ComponentDidMount invoked.');
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        console.log('shouldComponentUpdate invoked', nextProps, nextState);
+
+        return true;
+    }
+
+    componentWillUpdate(nextProps, nextState) {
+        console.log('componentWillUpdate invoked', nextProps, nextState);
+    }
+
+    componentDidUpdate() {
+        console.log('componentDidUpdate invoked');
+    }
+
     onDeletePerson = (index) => {
         // Create a copy of the array to  ensure immutability.
         // This can also be done with slice()
