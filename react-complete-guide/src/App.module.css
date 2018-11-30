@@ -12,8 +12,8 @@
 
 .toggleButton {
     margin: 16px auto;
-    background-color: green;
-    color: white;
+    background-color: lightgreen;
+    color: black;
     font: inherit;
     border: 1px solid #eee;
     padding: 8px;
@@ -21,6 +21,16 @@
     outline: 0;
 }
 
+.toggleButton:hover {
+    background-color: forestgreen;
+    color: white;
+}
+
 .toggleButtonVisible {
-    background-color: red;
+    background-color: lightcoral;
+}
+
+.toggleButtonVisible:hover {
+    background-color: darkred;
+    color: white;
 }
