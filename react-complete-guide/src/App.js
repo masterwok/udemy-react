@@ -52,15 +52,18 @@ class App extends Component {
         // Scoped styles are defined as objects and applied through the style attribute
         const buttonStyle = {
             margin: '16px auto'
-            , backgroundColor: 'white'
+            , backgroundColor: 'green'
+            , color: 'white'
             , font: 'inherit'
             , border: '1px solid blue'
             , padding: '8px'
             , cursor: 'pointer'
         };
 
-        const persons = this.state.isPersonsVisible
-            ? <div>
+        let persons = null;
+
+        if (this.state.isPersonsVisible) {
+            persons = <div>
                 {this.state.persons.map((person, index) =>
                     <Person
                         key={person.id}
@@ -70,7 +73,10 @@ class App extends Component {
                         onNameChange={(event) => this.onNameChange(event, person.id)}/>
                 )}
             </div>
-            : null;
+
+            buttonStyle.backgroundColor = 'red';
+        }
+
 
         return (
             <div className="App">
