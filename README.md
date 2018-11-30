@@ -39,7 +39,7 @@ bootstraping the application, they will not have their own branch.
   * [Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html)
   * [Lists & Keys](https://reactjs.org/docs/lists-and-keys.html)
 
-# Section 5: Styling React Components & Elements
+### Section 5: Styling React Components & Elements
 
 * Setting styles dynamically
 * Settings Class Names Dynamically
