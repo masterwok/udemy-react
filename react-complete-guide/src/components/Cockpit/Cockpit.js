@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Cockpit.module.css'
+import Aux from "../../hoc/Aux";
 
 
 export default (props) => {
@@ -19,7 +20,7 @@ export default (props) => {
     }
 
     return (
-        <div>
+        <Aux>
             <h1>This is a React app!</h1>
             <p className={containerClasses.join(' ')}>Foo bar baz bax</p>
             <button
@@ -27,6 +28,6 @@ export default (props) => {
                 onClick={props.onToggleButtonClick}>
                 Toggle Persons
             </button>
-        </div>
+        </Aux>
     );
 }
