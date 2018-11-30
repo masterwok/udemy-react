@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Person from './Person/Person.js'
-import Radium, {StyleRoot} from 'radium';
-import './App.css';
+import styles from './App.module.css';
 
 class App extends Component {
 
@@ -49,23 +48,8 @@ class App extends Component {
     });
 
     render() {
-
-        // Scoped styles are defined as objects and applied through the style attribute
-        const buttonStyle = {
-            margin: '16px auto'
-            , backgroundColor: 'green'
-            , color: 'white'
-            , font: 'inherit'
-            , border: '1px solid blue'
-            , padding: '8px'
-            , cursor: 'pointer'
-            , ':hover': {
-                backgroundColor: 'lightgreen'
-                , color: 'black'
-            }
-        };
-
         let persons = null;
+        const buttonClasses = [styles.toggleButton];
 
         if (this.state.isPersonsVisible) {
             persons = <div>
@@ -79,38 +63,32 @@ class App extends Component {
                 )}
             </div>;
 
-            buttonStyle.backgroundColor = 'red';
-            buttonStyle[':hover'] = {
-                backgroundColor: 'purple'
-                , color: 'black'
-            }
+            buttonClasses.push(styles.toggleButtonVisible)
         }
 
-        const classes = [];
+        const containerClasses = [];
 
         if (this.state.persons.length <= 2) {
-            classes.push('red');
+            containerClasses.push(styles.red);
         }
 
         if (this.state.persons.length <= 1) {
-            classes.push('bold');
+            containerClasses.push(styles.bold);
         }
 
         return (
-            <StyleRoot>
-                <div className="App">
-                    <h1>This is a React app!</h1>
-                    <p className={classes.join(' ')}>Foo bar baz bax</p>
-                    <button
-                        style={buttonStyle}
-                        onClick={this.onTogglePersons}>
-                        Toggle Persons
-                    </button>
-                    {persons}
-                </div>
-            </StyleRoot>
+            <div className={styles.App}>
+                <h1>This is a React app!</h1>
+                <p className={containerClasses.join(' ')}>Foo bar baz bax</p>
+                <button
+                    className={buttonClasses.join(' ')}
+                    onClick={this.onTogglePersons}>
+                    Toggle Persons
+                </button>
+                {persons}
+            </div>
         );
     }
 }
 
-export default Radium(App);
+export default App;
