@@ -14,6 +14,20 @@ class App extends Component {
         , isPersonsVisible: false
     };
 
+    constructor(props) {
+        super(props);
+
+        console.log('Constructor invoked.');
+    }
+
+    componentWillMount() {
+        console.log('ComponentWillMount invoked.');
+    }
+
+    componentDidMount() {
+        console.log('ComponentDidMount invoked.');
+    }
+
     onDeletePerson = (index) => {
         // Create a copy of the array to  ensure immutability.
         // This can also be done with slice()
@@ -49,6 +63,7 @@ class App extends Component {
     });
 
     render() {
+        console.log('Render invoked.');
 
         return (
             <div className={styles.App}>
