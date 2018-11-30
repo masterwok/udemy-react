@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Person from './Person/Person.js'
 import styles from './App.module.css';
+import ErrorBoundary from './ErrorBoundary/ErrorBoundary'
 
 class App extends Component {
 
@@ -54,12 +55,13 @@ class App extends Component {
         if (this.state.isPersonsVisible) {
             persons = <div>
                 {this.state.persons.map((person, index) =>
-                    <Person
-                        key={person.id}
-                        name={person.name}
-                        age={person.age}
-                        click={this.onDeletePerson.bind(this, index)}
-                        onNameChange={(event) => this.onNameChange(event, person.id)}/>
+                    <ErrorBoundary key={person.id}>
+                        <Person
+                            name={person.name}
+                            age={person.age}
+                            click={this.onDeletePerson.bind(this, index)}
+                            onNameChange={(event) => this.onNameChange(event, person.id)}/>
+                    </ErrorBoundary>
                 )}
             </div>;
 
