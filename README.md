@@ -60,6 +60,7 @@ bootstraping the application, they will not have their own branch.
 * Helpful links:
   * [Error Boundaries](https://reactjs.org/docs/error-boundaries.html)
   * [Chrome DevTool Debugging](https://developers.google.com/web/tools/chrome-devtools/javascript/)
+  * [Debugging create-react-app Applications with WebStorm](https://blog.jetbrains.com/webstorm/2017/01/debugging-react-apps/)
 
 
 
