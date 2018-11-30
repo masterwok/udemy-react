@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import styles from './App.module.css';
 import Persons from "../../components/Persons/Persons";
 import Cockpit from "../../components/Cockpit/Cockpit";
 
-class App extends Component {
+class App extends PureComponent {
 
     state = {
         persons: [
@@ -26,12 +26,6 @@ class App extends Component {
 
     componentDidMount() {
         console.log('ComponentDidMount invoked.');
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-        console.log('shouldComponentUpdate invoked', nextProps, nextState);
-
-        return true;
     }
 
     componentWillUpdate(nextProps, nextState) {
@@ -81,6 +75,8 @@ class App extends Component {
 
         return (
             <div className={styles.App}>
+                <button onClick={() => this.setState({isPersonsVisible: true})}>Show Persons
+                </button>
                 <Cockpit
                     isPersonsVisible={this.state.isPersonsVisible}
                     personsCount={this.state.persons.length}

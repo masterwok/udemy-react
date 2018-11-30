@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import Person from "../Person/Person";
 
 
-class Persons extends Component {
+class Persons extends PureComponent {
 
     constructor(props) {
         super(props);
@@ -20,12 +20,6 @@ class Persons extends Component {
 
     componentWillReceiveProps(nextProps) {
         console.log('ComponentWillReceiveProps invoked', nextProps);
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-        console.log('shouldComponentUpdate invoked', nextProps, nextState);
-
-        return true;
     }
 
     componentWillUpdate(nextProps, nextState) {
