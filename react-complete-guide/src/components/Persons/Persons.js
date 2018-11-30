@@ -1,13 +1,23 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Person from "../Person/Person";
 
-export default (props) => props.isVisible
-    ? props.persons.map((person, index) =>
-        <Person
-            name={person.name}
-            age={person.age}
-            click={props.onDeletePerson.bind(this, index)}
-            onNameChange={(event) => props.onNameChange(event, person.id)}/>
-    )
-    : null;
+
+class Persons extends Component {
+
+    render() {
+        return this.props.isVisible
+            ? this.props.persons.map((person, index) =>
+                <Person
+                    name={person.name}
+                    age={person.age}
+                    click={this.props.onDeletePerson.bind(this, index)}
+                    onNameChange={(event) => this.props.onNameChange(event, person.id)}/>
+            )
+            : null;
+    }
+}
+
+export default Persons;
+
+
 
