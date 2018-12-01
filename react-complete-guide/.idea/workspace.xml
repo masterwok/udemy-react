@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf79be1f-de91-4431-8812-56d2877ea0f2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../burger-builder/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../burger-builder/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../burger-builder/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -87,7 +90,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/node_modules/@types/react/index.d.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="398">
+                <state relative-caret-position="54">
                   <caret line="386" column="60" selection-start-line="386" selection-start-column="60" selection-end-line="386" selection-end-column="60" />
                 </state>
               </provider>
@@ -100,7 +103,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/package.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="160">
+                <state relative-caret-position="50">
                   <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
                 </state>
               </provider>
@@ -174,11 +177,11 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-3" />
-    <option name="y" value="-9" />
-    <option name="width" value="1926" />
-    <option name="height" value="1058" />
+    <option name="y" value="455" />
+    <option name="width" value="1280" />
+    <option name="height" value="697" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -223,7 +226,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="/mnt/global/Arch/Android/sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../assignment-two" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../burger-builder" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -356,15 +359,16 @@
       <workItem from="1543442830378" duration="839000" />
       <workItem from="1543449875324" duration="16715000" />
       <workItem from="1543538323925" duration="2587000" />
-      <workItem from="1543602746432" duration="15675000" />
+      <workItem from="1543602746432" duration="17795000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47856000" />
+    <option name="totallyTimeSpent" value="49976000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-3" y="-9" width="1926" height="1058" extended-state="6" />
+    <frame x="-3" y="455" width="1280" height="697" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.18306878" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -381,7 +385,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3614865" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.60910815" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -546,7 +550,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@types/react/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
+        <state relative-caret-position="54">
           <caret line="386" column="60" selection-start-line="386" selection-start-column="60" selection-end-line="386" selection-end-column="60" />
         </state>
       </provider>
