@@ -63,4 +63,21 @@ bootstraping the application, they will not have their own branch.
   * [Debugging create-react-app Applications with WebStorm](https://blog.jetbrains.com/webstorm/2017/01/debugging-react-apps/)
 
 
+### Section 7: Diving Deeper into Components & React Internals
 
+* Component lifecycles
+* Stateless vs Stateful components
+* Performance gains using PureComponents and React.memo()
+* How React updates the component tree
+* Creating higher order components (HOCs) to wrap components
+* The empty <></> tag for returning non-nested elements in JSX
+* How to use setState() correctly when referencing previous state (avoid race conditions)
+* Validation props using prop-types
+* Using component references both externally and internally
+* Using React.createRef() to create a reference that can be set using the ref attribute on a component
+* Using the Context API for global state to avoid the number of properties to pass down (should be used sparingly)
+* Helpful links:
+  * [State & Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
+  * [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html)
+  * [Higher Order Components](https://reactjs.org/docs/higher-order-components.html)
+  * [Refs](https://reactjs.org/docs/refs-and-the-dom.html)
