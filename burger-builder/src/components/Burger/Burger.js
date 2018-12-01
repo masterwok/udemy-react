@@ -18,11 +18,14 @@ const transformIngredients = (ingredients) => Object
     );
 
 const burger = (props) => {
+    let ingredients = transformIngredients(props.ingredients);
 
     return (
         <div className={styles.burger}>
             <BurgerIngredient type={'bread-top'}/>
-            {transformIngredients(props.ingredients)}
+            {ingredients.length > 0
+                ? transformIngredients(props.ingredients)
+                : <p>Please start adding ingredients.</p>}
             <BurgerIngredient type={'bread-bottom'}/>
         </div>
     );
