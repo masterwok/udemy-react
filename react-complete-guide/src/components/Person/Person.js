@@ -9,6 +9,8 @@ class Person extends Component {
         super(props);
 
         console.log('Constructor invoked.');
+
+        this.inputElement = React.createRef();
     }
 
     componentWillMount() {
@@ -20,14 +22,17 @@ class Person extends Component {
 
         // Referenced elements are available only after render is invoked.
         // Therefore mutations to referenced elements should occur in componentDidMount()
-        if (this.props.position === 0) {
-            this.inputElement.focus();
-        }
+        this.focus();
     }
 
     componentWillUnmount() {
         console.log('ComponentWillUnmount invoked.');
     }
+
+    focus() {
+        this.inputElement.current.focus();
+    }
+
 
     render() {
         console.log('Render invoked.');
@@ -39,9 +44,10 @@ class Person extends Component {
             <input
                 // Add reference to this element on this component.
                 // Referenced elements can only exist in stateful class components.
-                ref={(el) => {
-                    this.inputElement = el;
-                }}
+                // Old way of creating references
+                // ref={(el) => { this.inputElement = el; }}
+                // New 16.3+ way of creating references
+                ref={this.inputElement}
                 type="text"
                 onChange={this.props.onNameChange}
                 value={this.props.name}/>

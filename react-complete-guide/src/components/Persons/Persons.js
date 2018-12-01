@@ -8,6 +8,8 @@ class Persons extends PureComponent {
         super(props);
 
         console.log('Constructor invoked.');
+
+        this.lastPersonRef = React.createRef();
     }
 
     componentWillMount() {
@@ -16,6 +18,8 @@ class Persons extends PureComponent {
 
     componentDidMount() {
         console.log('ComponentDidMount invoked.');
+
+        this.lastPersonRef.current.focus();
     }
 
     componentWillReceiveProps(nextProps) {
@@ -33,17 +37,16 @@ class Persons extends PureComponent {
     render() {
         console.log('Render invoked.');
 
-        return this.props.isVisible
-            ? this.props.persons.map((person, index) =>
-                <Person
-                    key={person.id}
-                    position={index}
-                    name={person.name}
-                    age={person.age}
-                    click={this.props.onDeletePerson.bind(this, index)}
-                    onNameChange={(event) => this.props.onNameChange(event, person.id)}/>
-            )
-            : null;
+        return this.props.persons.map((person, index) =>
+            <Person
+                key={person.id}
+                ref={this.lastPersonRef}
+                position={index}
+                name={person.name}
+                age={person.age}
+                click={this.props.onDeletePerson.bind(this, index)}
+                onNameChange={(event) => this.props.onNameChange(event, person.id)}/>
+        );
     }
 }
 

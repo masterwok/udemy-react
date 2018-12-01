@@ -13,13 +13,17 @@ export default (
     WrapperComponent
     , className
 ) => {
-    return class extends Component {
+    const SecondWithClass = class extends Component {
         render() {
             return (
                 <div className={className}>
-                    <WrapperComponent {...this.props}/>
+                    <WrapperComponent ref={this.props.forwardedRef} {...this.props}/>
                 </div>
             );
         }
     };
+
+    return React.forwardRef((props, ref) => {
+        return <SecondWithClass {...props} forwardedRef={ref}/>
+    })
 }

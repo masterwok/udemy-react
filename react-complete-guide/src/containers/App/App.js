@@ -88,11 +88,11 @@ class App extends PureComponent {
                     isPersonsVisible={this.state.isPersonsVisible}
                     personsCount={this.state.persons.length}
                     onToggleButtonClick={this.onTogglePersons}/>
-                <Persons
-                    isVisible={this.state.isPersonsVisible}
+
+                {this.state.isPersonsVisible ? <Persons
                     persons={this.state.persons}
                     onDeletePerson={this.onDeletePerson}
-                    onNameChange={this.onNameChange}/>
+                    onNameChange={this.onNameChange}/> : null}
             </>
         );
     }
