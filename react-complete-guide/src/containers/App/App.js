@@ -3,8 +3,8 @@ import styles from './App.module.css';
 import Persons from "../../components/Persons/Persons";
 import Cockpit from "../../components/Cockpit/Cockpit";
 import secondWithClass from '../../hoc/secondWithClass';
+import AuthContext from '../../contexts/authContext';
 
-export const AuthContext = React.createContext(false);
 
 class App extends PureComponent {
 
@@ -80,9 +80,9 @@ class App extends PureComponent {
         , isPersonsVisible: !this.state.isPersonsVisible
     }));
 
-    onAuthenticate = () => this.setState({
-        isAuthenticated: true
-    });
+    onToggleAuthentication = () => this.setState((oldState, props) => ({
+        isAuthenticated: !oldState.isAuthenticated
+    }));
 
     render() {
         console.log('Render invoked.');
@@ -92,13 +92,16 @@ class App extends PureComponent {
                 <button onClick={() => this.setState({isPersonsVisible: true})}>
                     Show Persons
                 </button>
-                <button onClick={this.onAuthenticate}>Authenticate</button>
+                <button onClick={this.onToggleAuthentication}>Toggle Authentication</button>
                 <Cockpit
                     isPersonsVisible={this.state.isPersonsVisible}
                     personsCount={this.state.persons.length}
                     onToggleButtonClick={this.onTogglePersons}/>
 
-                <AuthContext.Provider value={this.state.isAuthenticated}>
+                <AuthContext.Provider value={{
+                    isAuthenticated: this.state.isAuthenticated
+                    , toggleAuthentication: this.onToggleAuthentication
+                }}>
                     {this.state.isPersonsVisible ? <Persons
                         persons={this.state.persons}
                         onDeletePerson={this.onDeletePerson}
