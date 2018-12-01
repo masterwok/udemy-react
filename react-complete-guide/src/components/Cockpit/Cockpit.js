@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Cockpit.module.css'
 
 
-export default (props) => {
+const cockpit = (props) => {
     const buttonClasses = [styles.toggleButton];
     const containerClasses = [];
 
@@ -29,4 +29,7 @@ export default (props) => {
             </button>
         </>
     );
-}
+};
+
+export default React.memo(cockpit);
+
