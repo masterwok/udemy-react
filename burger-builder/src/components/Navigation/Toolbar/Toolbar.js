@@ -10,7 +10,7 @@ export default (props) => (
         <div className={styles.logo}>
             <Logo/>
         </div>
-        <nav>
+        <nav className={styles.desktopOnly}>
             <NavigationItems/>
         </nav>
     </header>
