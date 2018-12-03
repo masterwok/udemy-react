@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './OrderSummary.module.css';
+import Button from "../../Common/Button/Button";
 
 export default (props) => (
     <>
@@ -13,5 +14,12 @@ export default (props) => (
             ))}
         </ul>
         <p>Continue to checkout?</p>
+
+        <Button
+            buttonType={'Danger'}
+            onClick={props.onCancel}>CANCEL</Button>
+        <Button
+            buttonType={'Success'}
+            onClick={props.onContinue}>CONTINUE</Button>
     </>
 );

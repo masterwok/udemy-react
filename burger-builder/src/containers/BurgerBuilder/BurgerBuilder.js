@@ -22,7 +22,7 @@ class BurgerBuilder extends Component {
         }
         , totalPrice: 4
         , isPurchasable: false
-        , hasStartedOrder: false
+        , hasStartedOrder: true
     };
 
     onAdd = (key) => {
@@ -90,7 +90,10 @@ class BurgerBuilder extends Component {
             <Modal
                 show={this.state.hasStartedOrder}
                 onBackdropClick={this.stopOrder}>
-                <OrderSummary ingredients={this.state.ingredients}/>
+                <OrderSummary
+                    ingredients={this.state.ingredients}
+                    onCancel={this.stopOrder}
+                    onContinue={this.stopOrder}/>
             </Modal>
 
             <Burger ingredients={this.state.ingredients}/>
