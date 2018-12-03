@@ -22,7 +22,7 @@ class BurgerBuilder extends Component {
         }
         , totalPrice: 4
         , isPurchasable: false
-        , hasStartedOrder: true
+        , hasStartedOrder: false
     };
 
     onAdd = (key) => {
