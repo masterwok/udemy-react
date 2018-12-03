@@ -85,6 +85,15 @@ class BurgerBuilder extends Component {
         hasStartedOrder: false
     });
 
+    orderContinue = () => {
+
+        alert('Continue!');
+
+        return this.setState({
+            hasStartedOrder: false
+        });
+    };
+
     render = () => (
         <>
             <Modal
@@ -93,7 +102,7 @@ class BurgerBuilder extends Component {
                 <OrderSummary
                     ingredients={this.state.ingredients}
                     onCancel={this.stopOrder}
-                    onContinue={this.stopOrder}/>
+                    onContinue={this.orderContinue}/>
             </Modal>
 
             <Burger ingredients={this.state.ingredients}/>
