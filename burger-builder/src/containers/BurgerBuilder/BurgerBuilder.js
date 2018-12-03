@@ -81,9 +81,15 @@ class BurgerBuilder extends Component {
         hasStartedOrder: true
     });
 
+    stopOrder = () => this.setState({
+        hasStartedOrder: false
+    });
+
     render = () => (
         <>
-            <Modal show={this.state.hasStartedOrder}>
+            <Modal
+                show={this.state.hasStartedOrder}
+                onBackdropClick={this.stopOrder}>
                 <OrderSummary ingredients={this.state.ingredients}/>
             </Modal>
 
