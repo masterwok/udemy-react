@@ -9,8 +9,17 @@ const buildControl = (props) => {
             <div className={styles.Label}>
                 {props.label}
             </div>
-            <button className={styles.Less}>Less</button>
-            <button className={styles.More}>More</button>
+            <button
+                className={styles.Less}
+                disabled={props.disabled}
+                onClick={props.onRemove.bind(this, props.type)}>
+                Less
+            </button>
+            <button
+                className={styles.More}
+                onClick={props.onAdd.bind(this, props.type)}>
+                More
+            </button>
         </div>
     );
 };
@@ -18,6 +27,5 @@ const buildControl = (props) => {
 buildControl.propTypes = {
     label: PropTypes.string
 };
-
 
 export default buildControl;

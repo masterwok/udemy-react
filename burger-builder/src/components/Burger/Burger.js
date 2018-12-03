@@ -15,7 +15,16 @@ const transformIngredients = (ingredients) => Object
         <BurgerIngredient
             key={`${k}_${i}`}
             type={k}/>)
-    );
+    )
+    .reduce((previous, current) => {
+        const ret = [...previous];
+
+        if(current.length > 0) {
+            ret.push(current);
+        }
+
+        return ret;
+    });
 
 const burger = (props) => {
     let ingredients = transformIngredients(props.ingredients);
