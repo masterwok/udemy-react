@@ -81,3 +81,12 @@ bootstraping the application, they will not have their own branch.
   * [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html)
   * [Higher Order Components](https://reactjs.org/docs/higher-order-components.html)
   * [Refs](https://reactjs.org/docs/refs-and-the-dom.html)
+
+### Section 8: A Real App: The Burger Builder (Basic Version)
+
+* How to plan the layout of a React application
+* How to plan the state of a React application
+* How to structure a React application
+* Implementing sidebards, backdrops, toolbars, dynamic components, controls, etc.
+
+

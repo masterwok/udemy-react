@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2ffc5dbc-37c8-42b4-9bbd-34d217b485ae" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/Layout/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hocs/Layout/Layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout/Layout.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/hocs/Layout/Layout.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/App/App.js" afterDir="false" />
-    </list>
+    <list default="true" id="2ffc5dbc-37c8-42b4-9bbd-34d217b485ae" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -261,11 +257,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/hocs/Aux" />
       <recent name="$PROJECT_DIR$/src/hocs" />
       <recent name="$PROJECT_DIR$/src/components/Navigation/DrawerToggle" />
       <recent name="$PROJECT_DIR$/src/components/Navigation/NavigationItems/NavigationItem" />
       <recent name="$PROJECT_DIR$/src/components/Common/Modal" />
-      <recent name="$PROJECT_DIR$/src/components/Burger/BuildControls" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/assets/images" />
@@ -386,12 +382,12 @@
       <option name="presentableId" value="Default" />
       <updated>1543669745707</updated>
       <workItem from="1543669747161" duration="10023000" />
-      <workItem from="1543792188638" duration="18076000" />
+      <workItem from="1543792188638" duration="18404000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28099000" />
+    <option name="totallyTimeSpent" value="28427000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="-9" width="1926" height="1058" extended-state="6" />
@@ -455,7 +451,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hocs/Aux.js">
+    <entry file="file://$PROJECT_DIR$/src/hocs/Aux/Aux.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="40" selection-start-column="40" selection-end-column="40" />
