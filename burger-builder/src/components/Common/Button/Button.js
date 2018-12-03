@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './Button.module.css';
 
 
-export default (props) => {
+const button = (props) => {
     return (
         <button
             className={`${styles.Button} ${styles[props.buttonType]}`}
@@ -10,4 +11,11 @@ export default (props) => {
             {props.children}
         </button>
     );
-}
+};
+
+button.propTypes = {
+    buttonType: PropTypes.string.isRequired
+    , onClick: PropTypes.func.isRequired
+};
+
+export default button;

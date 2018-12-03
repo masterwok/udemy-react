@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './Modal.module.css';
 import Backdrop from "../Backdrop/Backdrop";
 
 
-export default (props) => (
+const modal = (props) => (
     <>
         <Backdrop
             show={props.show}
@@ -18,3 +19,10 @@ export default (props) => (
         </div>
     </>
 );
+
+modal.propTypes = {
+    show: PropTypes.bool
+    , onBackdropClick: PropTypes.func
+};
+
+export default modal;

@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './OrderSummary.module.css';
 import Button from "../../Common/Button/Button";
 
-export default (props) => (
+const orderSummary = (props) => (
     <>
         <h3>Your Order</h3>
         <p>A delicious burger with the following ingredients:</p>
@@ -26,3 +27,12 @@ export default (props) => (
             onClick={props.onContinue}>CONTINUE</Button>
     </>
 );
+
+orderSummary.propTypes = {
+    onContinue: PropTypes.func.isRequired
+    , onCancel: PropTypes.func.isRequired
+    , totalPrice: PropTypes.number.isRequired
+    , ingredients: PropTypes.object.isRequired
+};
+
+export default orderSummary;

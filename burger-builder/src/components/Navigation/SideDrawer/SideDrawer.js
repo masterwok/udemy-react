@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import NavigationItems from "../NavigationItems/NavigationItems";
 import Logo from "../../Logo/Logo";
 import styles from './SideDrawer.module.css';
 import Backdrop from "../../Common/Backdrop/Backdrop";
 
 
-export default (props) => {
+const sideDrawer = (props) => {
 
     const sideDrawerClasses = [
         styles.sideDrawer
@@ -30,4 +31,11 @@ export default (props) => {
             </div>
         </>
     );
-}
+};
+
+sideDrawer.propTypes = {
+    show: PropTypes.bool.isRequired
+    , onCloseDrawer: PropTypes.func.isRequired
+};
+
+export default sideDrawer;

@@ -1,7 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './NavigationItem.module.css';
 
-export default (props) => (
+
+const navigationItem = (props) => (
     <li className={styles.navigationItem}>
         <a
             className={props.active ? styles.active : null}
@@ -10,3 +12,9 @@ export default (props) => (
         </a>
     </li>
 );
+
+navigationItem.propTypes = {
+    active: PropTypes.bool
+};
+
+export default navigationItem;
