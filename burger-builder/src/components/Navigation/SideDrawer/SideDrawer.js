@@ -10,7 +10,10 @@ export default (props) => {
 
     return (
         <div className={[styles.sideDrawer]}>
-            <Logo/>
+            <div className={styles.logo}>
+                <Logo/>
+            </div>
+
             <nav>
                 <NavigationItems/>
             </nav>
