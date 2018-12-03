@@ -22,6 +22,7 @@ class BurgerBuilder extends Component {
         }
         , totalPrice: 4
         , isPurchasable: false
+        , hasStartedOrder: false
     };
 
     onAdd = (key) => {
@@ -76,9 +77,13 @@ class BurgerBuilder extends Component {
         return disabledInfo;
     };
 
+    startOrder = () => this.setState({
+        hasStartedOrder: true
+    });
+
     render = () => (
         <>
-            <Modal>
+            <Modal show={this.state.hasStartedOrder}>
                 <OrderSummary ingredients={this.state.ingredients}/>
             </Modal>
 
@@ -89,7 +94,8 @@ class BurgerBuilder extends Component {
                 onRemove={this.onRemove}
                 disabledInfo={this.getDisabledInfo()}
                 totalPrice={this.state.totalPrice}
-                isPurchasable={this.state.isPurchasable}/>
+                isPurchasable={this.state.isPurchasable}
+                startOrder={this.startOrder}/>
         </>
     );
 }
