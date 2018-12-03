@@ -2,21 +2,32 @@ import React from 'react';
 import NavigationItems from "../NavigationItems/NavigationItems";
 import Logo from "../../Logo/Logo";
 import styles from './SideDrawer.module.css';
+import Backdrop from "../../Common/Backdrop/Backdrop";
 
 
 export default (props) => {
 
-    // TODO: Add class logic
+    const sideDrawerClasses = [
+        styles.sideDrawer
+        , props.show ? styles.open : styles.close
+    ].join(' ');
 
     return (
-        <div className={[styles.sideDrawer]}>
-            <div className={styles.logo}>
-                <Logo/>
-            </div>
+        <>
+            <Backdrop
+                show={props.show}
+                onClick={props.onCloseDrawer}/>
 
-            <nav>
-                <NavigationItems/>
-            </nav>
-        </div>
+            <div
+                className={sideDrawerClasses}>
+                <div className={styles.logo}>
+                    <Logo/>
+                </div>
+
+                <nav>
+                    <NavigationItems/>
+                </nav>
+            </div>
+        </>
     );
 }
