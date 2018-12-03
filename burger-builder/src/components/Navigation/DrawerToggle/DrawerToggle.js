@@ -1,6 +1,13 @@
 import React from 'react';
+import styles from './DrawerToggle.module.css'
 
 
 export default (props) => (
-    <div onClick={props.onClick}>MENU</div>
+    <div
+        className={styles.DrawerToggle}
+        onClick={props.onClick}>
+        <div/>
+        <div/>
+        <div/>
+    </div>
 );
