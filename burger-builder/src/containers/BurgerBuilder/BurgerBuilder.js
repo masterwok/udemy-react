@@ -19,6 +19,7 @@ class BurgerBuilder extends Component {
             , meat: 0
         }
         , totalPrice: 4
+        , isPurchasable: false
     };
 
     onAdd = (key) => {
@@ -32,6 +33,8 @@ class BurgerBuilder extends Component {
                 , totalPrice: prevState.totalPrice + INGREDIENT_PRICES[key]
             };
         });
+
+        this.updatePurchaseState();
     };
 
     onRemove = (key) => {
@@ -46,10 +49,20 @@ class BurgerBuilder extends Component {
 
             return {
                 ingredients: ingredients
-                , totalPrice: prevState.totalPrice + INGREDIENT_PRICES[key]
+                , totalPrice: prevState.totalPrice - INGREDIENT_PRICES[key]
             };
         });
+
+        this.updatePurchaseState();
     };
+
+    updatePurchaseState() {
+        this.setState((prevState, _) => ({
+            isPurchasable: Object.keys(prevState.ingredients)
+                .map(k => prevState.ingredients[k])
+                .reduce((p, c) => p + c, 0) > 0
+        }));
+    }
 
     getDisabledInfo = () => {
         const disabledInfo = {...this.state.ingredients};
@@ -61,20 +74,18 @@ class BurgerBuilder extends Component {
         return disabledInfo;
     };
 
-    render() {
+    render = () => (
+        <>
+            <Burger ingredients={this.state.ingredients}/>
 
-        return (
-            <>
-                <Burger ingredients={this.state.ingredients}/>
-
-                <BuildControls
-                    onAdd={this.onAdd}
-                    onRemove={this.onRemove}
-                    disabledInfo={this.getDisabledInfo()}
-                    totalPrice={this.state.totalPrice}/>
-            </>
-        );
-    }
+            <BuildControls
+                onAdd={this.onAdd}
+                onRemove={this.onRemove}
+                disabledInfo={this.getDisabledInfo()}
+                totalPrice={this.state.totalPrice}
+                isPurchasable={this.state.isPurchasable}/>
+        </>
+    );
 }
 
 export default BurgerBuilder;

@@ -24,6 +24,11 @@ const buildControls = (props) => (
             onRemove={props.onRemove}
             type={c.type}
             label={c.label}/>)}
+        <button
+            className={styles.OrderButton}
+            disabled={!props.isPurchasable}>
+            ORDER NOW
+        </button>
     </div>
 );
 
