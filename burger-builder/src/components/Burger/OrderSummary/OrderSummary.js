@@ -13,6 +13,9 @@ export default (props) => (
                 </li>
             ))}
         </ul>
+        <p>
+            Total Price: <strong>${props.totalPrice.toFixed(2)}</strong>
+        </p>
         <p>Continue to checkout?</p>
 
         <Button

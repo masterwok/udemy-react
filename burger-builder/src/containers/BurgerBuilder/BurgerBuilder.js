@@ -100,6 +100,7 @@ class BurgerBuilder extends Component {
                 show={this.state.hasStartedOrder}
                 onBackdropClick={this.stopOrder}>
                 <OrderSummary
+                    totalPrice={this.state.totalPrice}
                     ingredients={this.state.ingredients}
                     onCancel={this.stopOrder}
                     onContinue={this.orderContinue}/>
