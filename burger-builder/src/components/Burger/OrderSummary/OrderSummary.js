@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import styles from './OrderSummary.module.css';
 import Button from "../../Common/Button/Button";
@@ -10,7 +10,8 @@ const orderSummary = (props) => (
         <ul>
             {Object.keys(props.ingredients).map(k => (
                 <li key={k}>
-                    <span className={styles.ingredientLabel}>{k}</span>: {props.ingredients[k]}
+                        <span
+                            className={styles.ingredientLabel}>{k}</span>: {props.ingredients[k]}
                 </li>
             ))}
         </ul>
@@ -27,6 +28,7 @@ const orderSummary = (props) => (
             onClick={props.onContinue}>CONTINUE</Button>
     </>
 );
+
 
 orderSummary.propTypes = {
     onContinue: PropTypes.func.isRequired
