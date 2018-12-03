@@ -65,13 +65,13 @@ class BurgerBuilder extends Component {
 
         return (
             <>
-                <h1>Total Price: ${this.state.totalPrice.toFixed(2)}</h1>
                 <Burger ingredients={this.state.ingredients}/>
 
                 <BuildControls
                     onAdd={this.onAdd}
                     onRemove={this.onRemove}
-                    disabledInfo={this.getDisabledInfo()}/>
+                    disabledInfo={this.getDisabledInfo()}
+                    totalPrice={this.state.totalPrice}/>
             </>
         );
     }
