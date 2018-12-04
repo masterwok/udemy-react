@@ -10,6 +10,7 @@ class Blog extends Component {
 
     state = {
         posts: []
+        , selectedPostId: null
     };
 
     componentDidMount() {
@@ -28,6 +29,13 @@ class Blog extends Component {
         });
     }
 
+    onPostClick = (id) => {
+        console.log(`selected: ${id}`);
+        this.setState({
+            selectedPostId: id
+        });
+    };
+
     render() {
         return (
             <div>
@@ -36,12 +44,14 @@ class Blog extends Component {
                     {this.state.posts.map(p => (
                         <Post
                             key={p.id}
+                            id={p.id}
                             title={p.title}
-                            author={p.author}/>
+                            author={p.author}
+                            onClick={this.onPostClick}/>
                     ))}
                 </section>
                 <section>
-                    <FullPost/>
+                    <FullPost id={this.state.selectedPostId}/>
                 </section>
                 <section>
                     <NewPost/>
