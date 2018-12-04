@@ -8,21 +8,28 @@ import axios from 'axios';
 
 class Blog extends Component {
 
+    state = {
+        posts: []
+    };
+
     componentDidMount() {
         axios.get(
             'https://jsonplaceholder.typicode.com/posts'
-        ).then(response => {
-            console.log(response);
-        });
+        ).then(response => this.setState({
+            posts: response.data
+        }));
     }
 
     render() {
         return (
             <div>
                 <section className="Posts">
-                    <Post/>
-                    <Post/>
-                    <Post/>
+
+                    {this.state.posts.map(p => (
+                        <Post
+                            key={p.id}
+                            title={p.title}/>
+                    ))}
                 </section>
                 <section>
                     <FullPost/>
